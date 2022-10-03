@@ -11,6 +11,7 @@ class Car extends Model
 
     protected $table = 'cars';
     protected $fillable = ['name', 'user_id'];
+    protected $with = ['user'];
 
     public function user()
     {
