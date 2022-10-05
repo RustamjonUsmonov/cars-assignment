@@ -28,7 +28,7 @@
                     "Cars"
                 ],
                 "summary": "Store new car",
-                "description": "Returns project data",
+                "description": "Returns car data",
                 "operationId": "storeCar",
                 "parameters": [
                     {
@@ -88,7 +88,9 @@
                         "description": "Not Found"
                     }
                 }
-            },
+            }
+        },
+        "/api/cars/{car_id}": {
             "put": {
                 "tags": [
                     "Cars"
@@ -98,9 +100,26 @@
                 "operationId": "updateCar",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "car_id",
                         "in": "path",
                         "description": "Car id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "car_id",
+                        "in": "query",
+                        "description": "Car id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
                         "required": true,
                         "schema": {
                             "type": "integer"
@@ -128,7 +147,7 @@
                 "operationId": "deleteCar",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "car_id",
                         "in": "path",
                         "description": "Car id",
                         "required": true,
@@ -148,42 +167,6 @@
                     },
                     "404": {
                         "description": "Resource Not Found"
-                    }
-                }
-            }
-        },
-        "/api/update-car-user": {
-            "put": {
-                "tags": [
-                    "Cars"
-                ],
-                "summary": "Update car user",
-                "description": "Returns car data",
-                "operationId": "updateCarUser",
-                "parameters": [
-                    {
-                        "name": "car_id",
-                        "in": "query",
-                        "required": true,
-                        "schema": {
-                            "type": "integer"
-                        }
-                    },
-                    {
-                        "name": "user_id",
-                        "in": "query",
-                        "required": true,
-                        "schema": {
-                            "type": "integer"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    },
-                    "400": {
-                        "description": "Bad Request"
                     }
                 }
             }
