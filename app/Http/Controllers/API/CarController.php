@@ -17,8 +17,8 @@ use Illuminate\Http\Request;
  *              "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
  *          }
  *      },
- *      title="L5 OpenApi",
- *      description="L5 Swagger OpenApi description"
+ *      title="Cars Assignment",
+ *      description="Assignment to get hired :)"
  * )
  */
 class CarController extends Controller

@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "L5 OpenApi",
-        "description": "L5 Swagger OpenApi description",
+        "title": "Cars Assignment",
+        "description": "Assignment to get hired :)",
         "version": "1.0.0",
         "x-logo": {
             "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
